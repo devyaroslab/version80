@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<!--   TIPO OPERACION - stock.picking.type -->
+        <record model="ir.ui.view" id="view_stock_journal_form">
+            <field name="name">>stock.picking.type</field>
+            <field name="model">stock.picking.type</field>
+            <field name="inherit_id" ref="stock.view_picking_type_form" />
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                        <field name="stock_operationtype_id" widget="selection"/>
+                </field>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_stock_operationtype">
+			<field name="name">Tipo Operacion Almacen</field>
+			<field name="res_model">stock.operationtype</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>
